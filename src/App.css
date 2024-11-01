@@ -1,0 +1,113 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #bea5a5;
+}
+
+
+
+/* App.css */
+
+/* Ensure the body margin is zero */
+body {
+  margin: 0; /* Reset default body margin */
+}
+
+/* Basic styles for the navigation links */
+nav {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  justify-content: flex-start; /* Align items to the left */
+  background-color: #161e23; /* Navbar background */
+  padding: 15px 20px;
+  gap: 10px; /* Space between links */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: fixed; /* Keep the nav at the top */
+  top: 0; /* Position at the very top of the viewport */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  z-index: 1000; /* Stay above other content */
+}
+
+.nav-item {
+  color: #f5f5f5;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Add icon before text using data attribute */
+.nav-item::before {
+  content: attr(data-icon); /* Use the data-icon attribute */
+  margin-right: 10px; /* Space between icon and text */
+  font-size: 20px; /* Adjust size of the icon */
+}
+
+/* Hover and active styles */
+.nav-item:hover {
+  background-color: #d000ff; /* Hover background */
+  color: #ffffff;
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.nav-item:active {
+  background-color: #0051e6; /* Active background */
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Stack links vertically on smaller screens */
+    align-items: flex-start; /* Align to the left */
+  }
+
+  .nav-item {
+    width: 100%; /* Full width for items on small screens */
+    justify-content: flex-start; /* Left align items */
+    padding: 10px 15px; /* Adjust padding */
+  }
+}
+
